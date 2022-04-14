@@ -1,0 +1,7 @@
+{
+  "name": "starterkit-ionic-mobile-application",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
