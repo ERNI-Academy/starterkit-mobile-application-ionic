@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { TranslocoModule } from '@ngneat/transloco';
 import { TabsPage } from './tabs.page';
 
 const routes: Routes = [
@@ -8,9 +9,9 @@ const routes: Routes = [
     component: TabsPage,
     children: [
       {
-        path: 'tab1',
+        path: 'about-tab',
         loadChildren: () =>
-          import('../tab1/tab1.module').then((m) => m.Tab1PageModule),
+          import('../about/about.module').then((m) => m.AboutPageModule),
       },
       {
         path: 'tab2',
@@ -24,14 +25,14 @@ const routes: Routes = [
       },
       {
         path: '',
-        redirectTo: '/tabs/tab1',
+        redirectTo: '/tabs/about-tab',
         pathMatch: 'full',
       },
     ],
   },
   {
     path: '',
-    redirectTo: '/tabs/tab1',
+    redirectTo: '/tabs/about-tab',
     pathMatch: 'full',
   },
 ];

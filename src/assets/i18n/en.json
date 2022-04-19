@@ -1,0 +1,13 @@
+{
+    "about":{
+        "title": "About"
+    },
+    "about-content":{
+        "headline": "Start developing now",
+        "body": "This starterkit offers a cross-platform application made with Ionic and Angular",
+        "learn-more-button": "Learn more"
+    },
+    "tabs":{
+        "about": "About"
+    }
+}

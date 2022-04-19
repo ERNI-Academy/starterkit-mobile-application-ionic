@@ -1,0 +1,13 @@
+{
+    "about":{
+        "title": "Sobre nosotros"
+    },
+    "about-content":{
+        "headline": "Empieza a desarrollar ahora",
+        "body": "Este starterkit ofrece una aplicación cross-platform realizada con el framework Ionic y Angular",
+        "learn-more-button": "Ver más"
+    },
+    "tabs":{
+        "about": "Sobre nosotros"
+    }
+}

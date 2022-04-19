@@ -1,0 +1,19 @@
+.AboutContentComponent{
+    padding: 0 24px;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+
+    .logo{
+        margin: 32px 0;
+        max-width: 250px;
+    }
+
+    h1{
+        font-size: 52px;
+    }
+
+    ion-button{
+        width: 100%;
+    }
+}
