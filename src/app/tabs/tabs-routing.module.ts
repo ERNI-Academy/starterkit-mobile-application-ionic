@@ -14,9 +14,9 @@ const routes: Routes = [
           import('../about/about.module').then((m) => m.AboutPageModule),
       },
       {
-        path: 'tab2',
+        path: 'browse-tab',
         loadChildren: () =>
-          import('../tab2/tab2.module').then((m) => m.Tab2PageModule),
+          import('../browse/browse.module').then((m) => m.BrowsePageModule),
       },
       {
         path: 'tab3',

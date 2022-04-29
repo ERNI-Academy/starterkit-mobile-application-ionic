@@ -7,7 +7,14 @@
         "body": "This starterkit offers a cross-platform application made with Ionic and Angular",
         "learn-more-button": "Learn more"
     },
+    "browse": {
+        "title": "Browse"
+    },
+    "browse-list-item":{
+        "remove-button": "Remove"
+    },
     "tabs":{
-        "about": "About"
+        "about": "About",
+        "browse": "Browse"
     }
 }
