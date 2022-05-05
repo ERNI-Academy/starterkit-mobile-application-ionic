@@ -2,8 +2,14 @@
 // `ng build --prod` replaces `environment.ts` with `environment.prod.ts`.
 // The list of file replacements can be found in `angular.json`.
 
+import { InMemoryStorageService } from '../app/shared/services/storage-service/in-memory-storage.service';
+
 export const environment = {
   production: false,
+  testMode: false,
+  services: {
+    storageServiceType: InMemoryStorageService,
+  },
 };
 
 /*
