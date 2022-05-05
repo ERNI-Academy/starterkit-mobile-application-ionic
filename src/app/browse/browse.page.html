@@ -1,5 +1,10 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
+    <ion-buttons slot="primary">
+      <ion-button (click)="showAddModal()">
+        <ion-icon slot="icon-only" name="add-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
     <ion-title> {{ 'browse.title' | transloco }} </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -11,4 +16,9 @@
     </ion-toolbar>
   </ion-header>
   <app-browse-list></app-browse-list>
+  <ion-modal [isOpen]="isAddItemModalOpen">
+    <ng-template>
+      <app-browse-add-item-modal></app-browse-add-item-modal>
+    </ng-template>
+  </ion-modal>
 </ion-content>

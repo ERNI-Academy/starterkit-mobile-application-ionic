@@ -8,6 +8,7 @@ import { BrowsePageRoutingModule } from './browse-routing.module';
 import { BrowseListComponent } from './browse-list/browse-list.component';
 import { BrowseListItemComponent } from './browse-list/browse-list-item/browse-list-item.component';
 import { SharedModule } from '../shared/shared.module';
+import { BrowseAddItemModalComponent } from './browse-add-item-modal/browse-add-item-modal.component';
 
 @NgModule({
   imports: [
@@ -17,6 +18,11 @@ import { SharedModule } from '../shared/shared.module';
     BrowsePageRoutingModule,
     SharedModule,
   ],
-  declarations: [BrowsePage, BrowseListComponent, BrowseListItemComponent],
+  declarations: [
+    BrowsePage,
+    BrowseListComponent,
+    BrowseListItemComponent,
+    BrowseAddItemModalComponent,
+  ],
 })
 export class BrowsePageModule {}

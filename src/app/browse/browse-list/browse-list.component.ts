@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import InfoItem from '../../shared/models/info-item';
+import { InfoItemService } from '../../shared/services/info-item-service/info-item.service';
 
 @Component({
   selector: 'app-browse-list',
@@ -7,16 +8,15 @@ import InfoItem from '../../shared/models/info-item';
   styleUrls: ['./browse-list.component.scss'],
 })
 export class BrowseListComponent implements OnInit {
-  public items = [
-    new InfoItem({
-      title: 'Hello World',
-      description: 'This is a description',
-    }),
-    new InfoItem({
-      title: 'Hello World 2',
-      description: 'This is a description',
-    }),
-  ];
-  constructor() {}
-  ngOnInit() {}
+  public items: InfoItem[] = [];
+
+  constructor(private infoItemService: InfoItemService) {}
+
+  ngOnInit() {
+    this.setInitialInfoItems();
+  }
+
+  private async setInitialInfoItems(): Promise<void> {
+    this.items = await this.infoItemService.getAllInfoItems();
+  }
 }

@@ -6,5 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['browse.page.scss'],
 })
 export class BrowsePage {
+  public isAddItemModalOpen = false;
   constructor() {}
+
+  public showAddModal(): void {
+    this.isAddItemModalOpen = true;
+  }
 }
