@@ -1,0 +1,22 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title> {{ 'language.title' | transloco }} </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-item>
+    <ion-label>{{ 'language.select-label' | transloco }}</ion-label>
+    <ion-select
+      [(ngModel)]="activeLang"
+      (ionChange)="onSelectValueChange($event)"
+    >
+      <ion-select-option value="en">
+        {{ 'language.select-option-english' | transloco }}
+      </ion-select-option>
+      <ion-select-option value="es">
+        {{ 'language.select-option-spanish' | transloco }}
+      </ion-select-option>
+    </ion-select>
+  </ion-item>
+</ion-content>

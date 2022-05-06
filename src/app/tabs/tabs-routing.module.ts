@@ -19,9 +19,11 @@ const routes: Routes = [
           import('../browse/browse.module').then((m) => m.BrowsePageModule),
       },
       {
-        path: 'tab3',
+        path: 'language-tab',
         loadChildren: () =>
-          import('../tab3/tab3.module').then((m) => m.Tab3PageModule),
+          import('../language/language.module').then(
+            (m) => m.LanguagePageModule
+          ),
       },
       {
         path: '',

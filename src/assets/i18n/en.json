@@ -20,8 +20,15 @@
       "form-description-label": "Description",
       "form-add-button": "Add Item"
     },
+    "language":{
+      "title": "Language",
+      "select-label": "Language selection",
+      "select-option-english": "English",
+      "select-option-spanish": "Spanish"
+    },
     "tabs":{
         "about": "About",
-        "browse": "Browse"
+        "browse": "Browse",
+        "language": "Language"
     }
 }
