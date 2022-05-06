@@ -2,5 +2,6 @@
   <app-browse-list-item
     *ngFor="let item of items"
     [item]="item"
+    (removeItemEvent)="onRemoveItem($event)"
   ></app-browse-list-item>
 </ion-list>

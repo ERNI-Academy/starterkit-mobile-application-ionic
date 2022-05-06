@@ -13,6 +13,13 @@
     "browse-list-item":{
         "remove-button": "Remove"
     },
+    "browse-add-item-modal": {
+      "title": "Add Item",
+      "close-button": "Close",
+      "form-title-label": "Title",
+      "form-description-label": "Description",
+      "form-add-button": "Add Item"
+    },
     "tabs":{
         "about": "About",
         "browse": "Browse"

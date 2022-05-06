@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import InfoItem from '../../../shared/models/info-item';
 
 @Component({
@@ -8,8 +8,13 @@ import InfoItem from '../../../shared/models/info-item';
 })
 export class BrowseListItemComponent implements OnInit {
   @Input() public item: InfoItem;
+  @Output() public removeItemEvent = new EventEmitter();
 
   constructor() {}
 
   ngOnInit() {}
+
+  public removeItem(id: string): void {
+    this.removeItemEvent.emit(id);
+  }
 }

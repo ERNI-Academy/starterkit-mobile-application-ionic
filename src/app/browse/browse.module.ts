@@ -1,7 +1,7 @@
 import { IonicModule } from '@ionic/angular';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowsePage } from './browse.page';
 
 import { BrowsePageRoutingModule } from './browse-routing.module';
@@ -15,6 +15,7 @@ import { BrowseAddItemModalComponent } from './browse-add-item-modal/browse-add-
     IonicModule,
     CommonModule,
     FormsModule,
+    ReactiveFormsModule,
     BrowsePageRoutingModule,
     SharedModule,
   ],

@@ -1,1 +1,30 @@
-<p>browse-add-item-modal works!</p>
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="primary">
+      <ion-button (click)="closeModal()">
+        {{ 'browse-add-item-modal.close-button' | transloco }}
+      </ion-button>
+    </ion-buttons>
+    <ion-title> {{ 'browse-add-item-modal.title' | transloco }} </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <form [formGroup]="form">
+    <ion-item>
+      <ion-label position="floating">{{
+        'browse-add-item-modal.form-title-label' | transloco
+      }}</ion-label>
+      <ion-input formControlName="title"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">{{
+        'browse-add-item-modal.form-description-label' | transloco
+      }}</ion-label>
+      <ion-input formControlName="description"></ion-input>
+    </ion-item>
+  </form>
+  <ion-button expand="block" [disabled]="form.invalid" (click)="addItem()">{{
+    'browse-add-item-modal.form-add-button' | transloco
+  }}</ion-button>
+</ion-content>

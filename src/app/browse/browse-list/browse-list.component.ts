@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import InfoItem from '../../shared/models/info-item';
 import { InfoItemService } from '../../shared/services/info-item-service/info-item.service';
 
@@ -8,15 +8,14 @@ import { InfoItemService } from '../../shared/services/info-item-service/info-it
   styleUrls: ['./browse-list.component.scss'],
 })
 export class BrowseListComponent implements OnInit {
-  public items: InfoItem[] = [];
+  @Input() public items: InfoItem[] = [];
+  @Output() public removeItemEvent = new EventEmitter<string>();
 
-  constructor(private infoItemService: InfoItemService) {}
+  constructor() {}
 
-  ngOnInit() {
-    this.setInitialInfoItems();
-  }
+  ngOnInit() {}
 
-  private async setInitialInfoItems(): Promise<void> {
-    this.items = await this.infoItemService.getAllInfoItems();
+  public async onRemoveItem(id: string): Promise<void> {
+    this.removeItemEvent.emit(id);
   }
 }
