@@ -13,7 +13,7 @@ ERNI Academy StarterKit for cross-platform mobile projects using the latests ver
 
 ## Features
 
-- Native project for iOS and Android
+- Native project for iOS and Android usign Capacitor and Web
 - Tab Layout
 - Multi-language system with Transloco
 - LocalStorage / InMemoryStorage Service ready to use
