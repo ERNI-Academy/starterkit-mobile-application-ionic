@@ -1,16 +1,22 @@
-import { TestBed } from '@angular/core/testing';
+import { createServiceFactory, SpectatorService } from '@ngneat/spectator';
 
 import { InMemoryStorageService } from './in-memory-storage.service';
 
 describe('InMemoryStorageService', () => {
-  let service: InMemoryStorageService;
+  let spectator: SpectatorService<InMemoryStorageService>;
+  const createService = createServiceFactory(InMemoryStorageService);
 
   beforeEach(() => {
-    TestBed.configureTestingModule({});
-    service = TestBed.inject(InMemoryStorageService);
+    spectator = createService();
   });
 
-  it('should be created', () => {
-    expect(service).toBeTruthy();
+  it('should create', () => {
+    expect(spectator.service).toBeTruthy();
+  });
+
+  it('sets and returns the in memory data', async () => {
+    await spectator.service.set('my-testing-key', 'data');
+    const dataInMemory = await spectator.service.get('my-testing-key');
+    expect(dataInMemory).toEqual('data');
   });
 });

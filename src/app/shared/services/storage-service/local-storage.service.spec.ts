@@ -1,16 +1,22 @@
-import { TestBed } from '@angular/core/testing';
+import { createServiceFactory, SpectatorService } from '@ngneat/spectator';
 
 import { LocalStorageService } from './local-storage.service';
 
 describe('LocalStorageService', () => {
-  let service: LocalStorageService;
+  let spectator: SpectatorService<LocalStorageService>;
+  const createService = createServiceFactory(LocalStorageService);
 
   beforeEach(() => {
-    TestBed.configureTestingModule({});
-    service = TestBed.inject(LocalStorageService);
+    spectator = createService();
   });
 
-  it('should be created', () => {
-    expect(service).toBeTruthy();
+  it('should create', () => {
+    expect(spectator.service).toBeTruthy();
+  });
+
+  it('sets and returns the localStorage data', async () => {
+    await spectator.service.set('my-testing-key', 'data');
+    const dataInLocalStorage = await spectator.service.get('my-testing-key');
+    expect(dataInLocalStorage).toEqual('data');
   });
 });

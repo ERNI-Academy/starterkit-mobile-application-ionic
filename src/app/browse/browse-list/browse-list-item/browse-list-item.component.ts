@@ -6,13 +6,11 @@ import InfoItem from '../../../shared/models/info-item';
   templateUrl: './browse-list-item.component.html',
   styleUrls: ['./browse-list-item.component.scss'],
 })
-export class BrowseListItemComponent implements OnInit {
+export class BrowseListItemComponent {
   @Input() public item: InfoItem;
   @Output() public removeItemEvent = new EventEmitter();
 
   constructor() {}
-
-  ngOnInit() {}
 
   public removeItem(id: string): void {
     this.removeItemEvent.emit(id);

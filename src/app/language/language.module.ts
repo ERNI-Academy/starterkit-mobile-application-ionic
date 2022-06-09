@@ -4,7 +4,6 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { LanguagePage } from './language.page';
-import { ExploreContainerComponentModule } from '../explore-container/explore-container.module';
 
 import { LanguagePageRoutingModule } from './language-routing.module';
 import { SharedModule } from '../shared/shared.module';
@@ -14,7 +13,6 @@ import { SharedModule } from '../shared/shared.module';
     IonicModule,
     CommonModule,
     FormsModule,
-    ExploreContainerComponentModule,
     RouterModule.forChild([{ path: '', component: LanguagePage }]),
     LanguagePageRoutingModule,
     SharedModule,

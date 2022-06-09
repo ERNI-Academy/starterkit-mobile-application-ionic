@@ -1,24 +1,23 @@
-import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
+import { FormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
+import { createComponentFactory, Spectator } from '@ngneat/spectator';
+import { getTranslocoModule } from '../../testing/transloco-testing.module';
 
 import { LanguagePage } from './language.page';
 
 describe('LanguagePage', () => {
-  let component: LanguagePage;
-  let fixture: ComponentFixture<LanguagePage>;
+  let spectator: Spectator<LanguagePage>;
+  const createComponent = createComponentFactory({
+    component: LanguagePage,
+    imports: [IonicModule.forRoot(), getTranslocoModule(), FormsModule],
+  });
 
-  beforeEach(waitForAsync(() => {
-    TestBed.configureTestingModule({
-      declarations: [LanguagePage],
-      imports: [IonicModule.forRoot()],
-    }).compileComponents();
-
-    fixture = TestBed.createComponent(LanguagePage);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-  }));
+  beforeEach(() => {
+    spectator = createComponent();
+    spectator.detectChanges();
+  });
 
   it('should create', () => {
-    expect(component).toBeTruthy();
+    expect(spectator.component).toBeTruthy();
   });
 });

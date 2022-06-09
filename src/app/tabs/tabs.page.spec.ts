@@ -1,26 +1,22 @@
-import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
-import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
-
+import { IonicModule } from '@ionic/angular';
+import { createComponentFactory, Spectator } from '@ngneat/spectator';
+import { RouterTestingModule } from '@angular/router/testing';
 import { TabsPage } from './tabs.page';
+import { getTranslocoModule } from '../../testing/transloco-testing.module';
 
 describe('TabsPage', () => {
-  let component: TabsPage;
-  let fixture: ComponentFixture<TabsPage>;
-
-  beforeEach(waitForAsync(() => {
-    TestBed.configureTestingModule({
-      declarations: [TabsPage],
-      schemas: [CUSTOM_ELEMENTS_SCHEMA],
-    }).compileComponents();
-  }));
+  let spectator: Spectator<TabsPage>;
+  const createComponent = createComponentFactory({
+    component: TabsPage,
+    imports: [IonicModule.forRoot(), RouterTestingModule, getTranslocoModule()],
+  });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(TabsPage);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
+    spectator = createComponent();
+    spectator.detectChanges();
   });
 
   it('should create', () => {
-    expect(component).toBeTruthy();
+    expect(spectator.component).toBeTruthy();
   });
 });

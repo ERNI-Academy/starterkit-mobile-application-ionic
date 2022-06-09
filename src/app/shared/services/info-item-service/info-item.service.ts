@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import InfoItem from '../../models/info-item';
 import { StorageService } from '../storage-service/storage.service';
 
-const INFO_ITEM_LIST_STORAGE_KEY = 'INFO_ITEM_LIST_STORAGE_KEY';
+export const INFO_ITEM_LIST_STORAGE_KEY = 'INFO_ITEM_LIST_STORAGE_KEY';
 
 @Injectable({
   providedIn: 'root',
