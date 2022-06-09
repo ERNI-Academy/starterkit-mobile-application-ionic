@@ -59,23 +59,23 @@ Installation instructions {{ Name }} by running:
 
 5. Native projects
 
-5.1 Sync projects
+   5.1 Sync projects
 
-```sh
-npx cap sync
-```
+   ```sh
+   npx cap sync
+   ```
 
-5.1 Open projects
+   5.1 Open projects
 
-```sh
-npx cap open ios
-```
+   ```sh
+   npx cap open ios
+   ```
 
-```sh
-npx cap open android
-```
+   ```sh
+   npx cap open android
+   ```
 
-and run the solution
+   and run the solution
 
 ## Contributing
 
