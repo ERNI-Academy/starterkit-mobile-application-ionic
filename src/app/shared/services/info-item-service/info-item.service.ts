@@ -1,3 +1,4 @@
+import { v4 as uuidv4 } from 'uuid';
 import { Injectable } from '@angular/core';
 import InfoItem from '../../models/info-item';
 import { StorageService } from '../storage-service/storage.service';
@@ -18,7 +19,7 @@ export class InfoItemService {
     const item = new InfoItem({
       title,
       description,
-      id: self.crypto.randomUUID(),
+      id: uuidv4(),
     });
     list = [...list, item];
     await this.saveInfoItems(list);

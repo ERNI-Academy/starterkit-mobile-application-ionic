@@ -1,4 +1,4 @@
-package io.ionic.starter;
+package erni.betterask.starterkit.ionic;
 
 import com.getcapacitor.BridgeActivity;
 
