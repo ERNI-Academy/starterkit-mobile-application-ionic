@@ -93,7 +93,7 @@ Please see our [Code of Conduct](CODE_OF_CONDUCT.md)
 
 ## Stats
 
-Check [https://repobeats.axiom.co/](https://repobeats.axiom.co/) for the right URL
+![https://repobeats.axiom.co/api/embed/19f43be36b05a507d85eeff553629fdde8d70846.svg](https://repobeats.axiom.co/api/embed/19f43be36b05a507d85eeff553629fdde8d70846.svg)
 
 ## Follow us
 
